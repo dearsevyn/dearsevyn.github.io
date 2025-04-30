@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipbook Scavenger Hunt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="flipbook">
+        <button class="nav-btn left-btn" onclick="flipPage(-1)">←</button>
+
+        <div class="page" id="page1">
+            <h2>Welcome</h2>
+            <p>Find the hidden clue to unlock the next page.</p>
+            <img src="image1.jpg" alt="Scavenger Hunt Clue">
+            <input type="password" id="password1" placeholder="Enter password">
+            <button onclick="checkPassword(1)">Unlock</button>
+        </div>
+
+        <div class="page locked" id="page2">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <input type="password" id="password2" placeholder="Enter password">
+            <button onclick="checkPassword(2)">Unlock</button>
+        </div>
+
+        <button class="nav-btn right-btn" onclick="flipPage(1)">→</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
